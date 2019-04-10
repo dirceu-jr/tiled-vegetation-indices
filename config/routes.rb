@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/vegetation_index', to: 'vegetation_index#index', as: 'vegetation_index'
 end
