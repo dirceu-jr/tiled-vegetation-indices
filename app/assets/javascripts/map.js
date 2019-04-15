@@ -47,6 +47,10 @@ function addTileLayer(info) {
 
 function indices_of_base(base) {
 
+  // clear histogram
+  $("#index_histogram").html("");
+
+  // updates tile
   get_tiles_info(base);
 
   if (base == "rgb") {
@@ -375,9 +379,6 @@ $("#vi").change(function() {
     val = $(this).val()
     base = $("#base").val();
   ;
-
-  // clear histogram
-  $("#index_histogram").html("");
 
   if (val == "none") {
 
