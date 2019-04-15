@@ -1,8 +1,7 @@
 class VegetationIndexController < ApplicationController
   def index
     tile = params[:tile]
-    path = ""
-    tile_path = "#{path}/app/media/#{tile}"
+    tile_path = "#{Rails.root}/public/#{tile}"
   
     data = VegetationIndex.apply_index(params[:index], tile_path, params[:min], params[:max], params[:band_order])
     
