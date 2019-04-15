@@ -44,7 +44,9 @@ The histogram is then used to calculate a `min` and `max` used to "clip" results
 ## Where to look
 
 [/app/lib/vegetation_index.rb](https://github.com/dirceup/tiled-vegetation-indices/blob/master/app/lib/vegetation_index.rb)
+
 [/app/controllers/vegetation_index_controller.rb](https://github.com/dirceup/tiled-vegetation-indices/blob/master/app/controllers/vegetation_index_controller.rb)
+
 [/app/assets/javascripts/map.js](https://github.com/dirceup/tiled-vegetation-indices/blob/master/app/assets/javascripts/map.js)
 
 ## Requeriments
