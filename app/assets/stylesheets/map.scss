@@ -1,3 +1,39 @@
-// Place all the styles related to the map controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "leaflet";
+@import "leaflet.auto-layers";
+@import "multirange";
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body, #map {
+    height: 100%;
+    width: 100vw;
+}
+
+#sidebar {
+    height: 100%;
+    width: 279px;
+    float: left;
+    padding: 10px;
+    background: #F5F5F5;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+#map {
+    height: 100%;
+    width: calc(100vw - 299px);
+}
+
+#index_histogram {
+    background: #fff;
+}
+
+.ct-label {
+    color: #000;
+    font-size: 12px;
+}

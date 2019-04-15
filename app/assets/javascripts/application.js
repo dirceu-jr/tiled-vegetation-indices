@@ -12,4 +12,13 @@
 //
 //= require rails-ujs
 //= require activestorage
+//= require jquery-3.4.0.min.js
+//= require leaflet.js
+//= require leaflet-autolayers.js
+//= require leaflet-asset-pipeline.js
+//= require d3-color.min.js
+//= require d3-interpolate.min.js
+//= require d3-scale-chromatic.min.js
+//= require chartist.min.js
+//= require multirange.js
 //= require_tree .
