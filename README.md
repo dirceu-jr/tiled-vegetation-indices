@@ -69,7 +69,7 @@ The histogram is then used to calculate a `min` and `max` used to "clip" results
 
 ## Requeriments
 
-#### [libvips](https://github.com/jcupitt/libvips)
+#### [libvips](https://github.com/libvips/ruby-vips)
 
 #### [Ruby](https://www.ruby-lang.org/en/)
 
