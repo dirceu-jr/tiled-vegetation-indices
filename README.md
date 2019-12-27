@@ -51,9 +51,7 @@ The histogram is then used to calculate a `min` and `max` used to "clip" results
 
 ## Wait, what?
 
-Please follow through this file: [app/lib/vegetation_index.rb](https://github.com/dirceup/tiled-vegetation-indices/blob/master/app/lib/vegetation_index.rb)
-
-→
+Please follow through this file: [app/lib/vegetation_index.rb](https://github.com/dirceup/tiled-vegetation-indices/blob/master/app/lib/vegetation_index.rb) and below explanation →
 
 The method `generate_orthophoto_statistics` does generate a reduced dimension version of the full orthophoto because it is more efficient computationally to proceed with it reduced.
 It then calls `run_and_store_indices_statistics` that will call `index_statistics` for each Vegetation Index that we want to use.
