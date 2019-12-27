@@ -43,11 +43,22 @@ The histogram is then used to calculate a `min` and `max` used to "clip" results
 
 ## Where to look
 
-[/app/lib/vegetation_index.rb](https://github.com/dirceup/tiled-vegetation-indices/blob/master/app/lib/vegetation_index.rb)
+[app/lib/vegetation_index.rb](https://github.com/dirceup/tiled-vegetation-indices/blob/master/app/lib/vegetation_index.rb)
 
-[/app/controllers/vegetation_index_controller.rb](https://github.com/dirceup/tiled-vegetation-indices/blob/master/app/controllers/vegetation_index_controller.rb)
+[app/controllers/vegetation_index_controller.rb](https://github.com/dirceup/tiled-vegetation-indices/blob/master/app/controllers/vegetation_index_controller.rb)
 
-[/app/assets/javascripts/map.js](https://github.com/dirceup/tiled-vegetation-indices/blob/master/app/assets/javascripts/map.js)
+[app/assets/javascripts/map.js](https://github.com/dirceup/tiled-vegetation-indices/blob/master/app/assets/javascripts/map.js)
+
+## Wait, what?
+
+Please follow through this file: [app/lib/vegetation_index.rb](https://github.com/dirceup/tiled-vegetation-indices/blob/master/app/lib/vegetation_index.rb) and below explanation →
+
+The method `generate_orthophoto_statistics` does generate a reduced dimension version of the full orthophoto because it is more efficient computationally to proceed with it reduced.
+It then calls `run_and_store_indices_statistics` that will call `index_statistics` for each Vegetation Index that we want to use.
+
+`index_statistics` does apply a specified Vegetation Index to the reduced orthophoto and returns it's "min" and "max" values along with their "histogram with 256 bins".
+
+Now you can call `apply_index` for each tile generated from the full dimension orthophoto sending the "min"/"max" calculated by `index_statistics`. Or even better, you can use [findClippedMinMax()](https://github.com/dirceup/tiled-vegetation-indices/blob/master/app/assets/javascripts/map.js#L166) JavaScript method to increase the contrast by ignoring "the first and last 3% histogram values" and calculating a better "min"/"max" (clipped_min/clipped_max) to use in `apply_index`.
 
 ## JavaScript Libraries Used
 
